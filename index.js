@@ -23,9 +23,9 @@ const testSingleQuery = async (queryFromUser) => {
     const socket = io(baseUrl, connectionOptions);
 
     socket.on("connect", async () => {
-        console.log("connecting");
+        // console.log("connecting");
         setTimeout(() => {
-            console.log("Sending request");
+            // console.log("Sending request");
             socket.emit("botRequest", {
                 content: {
                     text: queryFromUser,
@@ -48,8 +48,8 @@ const testSingleQuery = async (queryFromUser) => {
     });
 
     socket.on("session", (session) => {
-        console.log("connected");
-        console.log({ session });
+        // console.log("connected");
+        // console.log({ session });
     });
 
     let response = ""
